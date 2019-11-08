@@ -13,4 +13,4 @@ NodeJs RestAPI 0.1 with express
 4.  install dependency express untuk handle route api kita nantinya,   
     "yarn add express"
 
-5   buat file dengan nama app.js "touch app.js"
+5.  buat file dengan nama app.js
