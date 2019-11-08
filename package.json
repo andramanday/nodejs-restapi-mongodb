@@ -1,0 +1,9 @@
+{
+  "name": "nodejs-restapi-mongodb",
+  "version": "1.0.0",
+  "description": "restApi dengan express dan mongodb",
+  "main": "index.js",
+  "repository": "http://antarra.teh",
+  "author": "Andra Manday",
+  "license": "MIT"
+}
