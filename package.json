@@ -2,11 +2,20 @@
   "name": "nodejs-restapi-mongodb",
   "version": "1.0.0",
   "description": "restApi dengan express dan mongodb",
-  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js"
+  },
   "repository": "http://antarra.teh",
   "author": "Andra Manday",
   "license": "MIT",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.19.4"
   }
 }

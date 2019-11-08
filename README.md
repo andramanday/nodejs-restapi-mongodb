@@ -14,3 +14,22 @@ NodeJs RestAPI 0.1 with express
     "yarn add express"
 
 5.  buat file dengan nama app.js
+
+6.  install devDependency nodemon yang berfungsi sebagai reraoute / auto restart server
+    yarn add nodemon -D
+
+7.  install dependency babel yang gunanya untuk transfile dari ES6 ke ES5 karna masih ada browser yang tidak support ES6.
+    yarn add babel-preset-env -D
+    yarn add babel-cli
+    yarn add babel-core
+
+8.  buat file dengan nama ".babelrc"
+    input :
+        {
+            "presets:" ["env"]
+        }
+
+9.  tambahkan pada file package.json
+    "scripts": {
+        "start": "nodemon --exec babel-node app.js"
+    },
