@@ -1,5 +1,6 @@
-import User from '../controllers/UserController';
 const auth = require('../middleware/auth')
+import User from '../controllers/UserController';
+import Product from '../controllers/ProductController';
 
 
 export default (app) => {
@@ -14,5 +15,7 @@ export default (app) => {
     app.post('/api/users/logout', auth, User.logout); // API route for user to 
     app.post('/api/users/logoutall', auth, User.logoutAll); // API route for user to Logout all active account
 
+    //ROUTE FOR PRODUCT
+    app.post('/api/product', auth, Product.insertProduct); // API route for product insert barang
 
 }
