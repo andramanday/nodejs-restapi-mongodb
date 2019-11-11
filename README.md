@@ -3,9 +3,15 @@ NodeJs RestAPI 0.1 with express
 by: Andra Manday
 
 ## Package NPM yang digunakan
-* [Express](http://www.dropwizard.io/1.0.2/docs/) - framework node.js yang minimal dan flexible untuk membangun sebuah web aplikasi dan fiturnya yg bagus untuk web
-* [mongoose](https://maven.apache.org/) - Object Modeling Tool yang dapat mempermudah cara kerja untuk mementukan schema dan interaksi dengan mongodb
-* [Babel](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Express](https://www.npmjs.com/package/express) - framework node.js yang minimal dan flexible untuk membangun sebuah web aplikasi dan fiturnya yg bagus untuk web
+* [mongoose](hhttps://mongoosejs.com/) - Object Modeling Tool yang dapat mempermudah cara kerja untuk mementukan schema dan interaksi dengan mongodb
+* [Babel](https://babeljs.io/) - berguna untuk transfile dari ES6 ke ES5 karna masih ada browser yang tidak support ES6.
+* [bcrypt.js](https://www.npmjs.com/package/bcrypt) — ini berfungsi untuk merubah  password menjadi hash sebelum password disimpan didatabase.
+* [validator](https://www.npmjs.com/package/validator) — digunakan sebagai data validasi yang sesuai dengan keinginan sebelum disimpan didatabase.
+* [Jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) — JSON Web Token(JWT) kita gunakan untuk authentication and authorization. sangat penting sebagai proteksi data.
+* [morgan](https://www.npmjs.com/package/morgan) berfungsi sebagai loggers data yang langsung kita lihat dihalaman terminal.
+* [dotenv](https://www.npmjs.com/package/dotenv) — This will enable us to create and manage environment variables in our project.
+* [nodemon](https://nodemon.io/) — Nodemon will re-run the express server every time we make changes to our code.
 
 ## Langkah-langkah membangun restFull API dengan Mongodb
 1.  di asumsikan semua sudah menginsall nodejs pada pc masing-masing.
