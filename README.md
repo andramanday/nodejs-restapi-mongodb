@@ -13,7 +13,21 @@ NodeJs RestAPI 0.1 with express
 4.  install dependency express untuk handle route api kita nantinya,   
     "yarn add express"
 
-5.  buat file dengan nama app.js
+5.  buat file app.js dan buat pada folder project struktur seperti berikut
+        src
+            config
+                database
+                    index.js
+            models
+                modelUser.js
+            routes
+                routeUser.js
+            middleware
+                auth.js
+            index.js
+        app.js
+        .babelrc
+        .env
 
 6.  install devDependency nodemon yang berfungsi sebagai reraoute / auto restart server
     yarn add nodemon -D
@@ -23,7 +37,7 @@ NodeJs RestAPI 0.1 with express
     yarn add babel-cli
     yarn add babel-core
 
-8.  buat file dengan nama ".babelrc"
+8.  buat file dengan nama ".babelrc" | lihat struktur no.5
     input :
         {
             "presets:" ["env"]
@@ -33,3 +47,15 @@ NodeJs RestAPI 0.1 with express
     "scripts": {
         "start": "nodemon --exec babel-node app.js"
     },
+
+10. buat database mongodb di https://cloud.mongodb.com/ , register akun kamu dan dapatkan 500MB storage gratis,
+    bangun cluster kamu sendiri dan copy settingan untuk nantinya digunakan sebagai penghubung ke database kamu.
+
+11. install depedency mongoose untuk koneksi dan ORM kita ke database monggodb
+    yarn add mongoose
+
+12. install depedency dotenv untuk meletakan semua variable settingan kita 
+    yarn add dotenv
+    dan buat file .env | lihat struktur no.5
+
+13. yarn add body-parser, ini berfungsi buat handle penerimaan request pada saat data diakses dengan mudah sebagai parameter.
