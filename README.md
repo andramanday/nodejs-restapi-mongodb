@@ -3,8 +3,9 @@ NodeJs RestAPI 0.1 with express
 by: Andra Manday
 
 #Package NPM yang digunakan
-    1. Express => framework node.js yang minimal dan flexible untuk membangun sebuah web aplikasi dan fiturnya yg bagus untuk web.
-    2. mongoose => Object Modeling Tool yang dapat mempermudah cara kerja untuk mementukan schema dan interaksi dengan mongodb.
+    1.  Express => framework node.js yang minimal dan flexible untuk membangun sebuah web aplikasi dan fiturnya yg bagus untuk web.
+    2.  mongoose => Object Modeling Tool yang dapat mempermudah cara kerja untuk mementukan schema dan interaksi dengan mongodb.
+    3.  babel =>
 
 #Langkah-langkah membangun restFull API dengan Mongodb
 1.  di asumsikan semua sudah menginsall nodejs pada pc masing-masing.
