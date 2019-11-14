@@ -4,9 +4,11 @@ import bcrypt from'bcryptjs'
 import jwt from 'jsonwebtoken'
 
 const userSchema = new mongoose.Schema({
-    name: {
+    mobile: {
         type: String,
+        min: 10,
         required: true,
+        unique: true,
         trim: true
     },
     email: {
@@ -25,6 +27,53 @@ const userSchema = new mongoose.Schema({
         required: true,
         minLength: 7
     },
+    ktp: [{
+        nik: {
+            type: String,
+            required: true,
+        },
+        nama: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        pob: {
+            type: String,
+            required: true
+        },
+        dob: {
+            type: Date,
+            required: true
+        },
+        ktpaddress: {
+            type: String,
+            required: true
+        },
+        domisili: {
+            type: String,
+            required: true
+        },
+        job: {
+            type: String,
+            require: true
+        }
+    }],
+    documents :[{
+        doctitle: {
+            type: String
+        },
+        docimg: {
+            type: String
+        }
+    }],
+    contact:[{
+        name: {
+            type: String
+        },
+        mobile: {
+            type: String
+        }
+    }],
     tokens: [{
         token: {
             type: String,

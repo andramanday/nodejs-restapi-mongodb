@@ -16,7 +16,17 @@ export default class UserController {
     static async getAll(req, res) {
         try {
             const user = await User.find()            
-            res.status(201).send({ user })
+            res.status(201).send(user)
+        } catch (error) {
+            res.status(400).send(error)
+        }
+    }
+    
+    static async getById(req, res) {
+        const { userId } = req.params
+        try {
+            const user = await User.findOne({ _id: userId })            
+            res.status(201).send(user)
         } catch (error) {
             res.status(400).send(error)
         }
@@ -68,6 +78,56 @@ export default class UserController {
             res.send()
         } catch (error) {
             res.status(500).send(error)
+        }
+    }
+
+    /**
+     * Controller For KTP
+     */
+
+    //GET KTP DATA
+    static async getKTP(req, res) {
+        const { userId } = req.params
+        try {
+            const product = await Product.find()            
+            res.status(201).send(product)
+        } catch (error) {
+            res.status(400).send(error)
+        }
+    }
+
+    //INSERT KTP
+    static async InsertKTP(req, res) {
+
+        const { userId } = req.params
+        try {
+            const user = await User.findOne({ _id: userId }) 
+            if(user.ktp[0]){
+                const ktpId = user.ktp[0]._id
+                User.update(
+                    { 'ktp._id': ktpId },
+                    { 
+                        $set: {
+                            "ktp": req.body
+                        }
+                    },
+                    {  safe: true, upsert: true},
+                    function(err, model) {
+                        if(err){
+                            console.log(err);
+                            return res.send(err);
+                        }
+                        return res.json(model);
+                    }
+                );
+            }else{
+                user.ktp = user.ktp.concat(req.body)
+                await user.save()
+                res.status(201).send({msg: 'Insert Success', user})
+            }      
+        } catch (error) {
+            res.status(400).send(error)
+            res.send(item);
         }
     }
 }
